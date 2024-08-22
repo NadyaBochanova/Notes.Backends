@@ -1,5 +1,6 @@
 ﻿using AutoMapper;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Authorization;
 using Notes.Application.Notes.Commands.CreateNote;
 using Notes.Application.Notes.Commands.DeleteNote;
 using Notes.Application.Notes.Commands.UpdateNote;
@@ -10,6 +11,7 @@ using Notes.WebApi.Models;
 namespace Notes.WebApi.Controllers
 {
     [Route("api/[controller]")]
+    [Authorize]
     public class NoteController : BaseController
     {
         private readonly IMapper _mapper;
