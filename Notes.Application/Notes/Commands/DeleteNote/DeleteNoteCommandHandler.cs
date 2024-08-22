@@ -14,7 +14,7 @@ namespace Notes.Application.Notes.Commands.DeleteNote
 
         public async Task Handle(DeleteNoteCommand request, CancellationToken cancellationToken)
         {
-            var note = await _dbContext.Notes.FindAsync(new[] { request.Id}, cancellationToken);
+            var note = await _dbContext.Notes.FindAsync(request.Id, cancellationToken);
 
             if (note == null || note.UserId != request.UserId) 
             {
