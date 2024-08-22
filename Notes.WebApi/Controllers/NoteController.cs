@@ -10,11 +10,15 @@ using Notes.Application.Notes.Queries.GetNoteList;
 using Notes.WebApi.Models;
 using System;
 using System.Threading.Tasks;
+using Asp.Versioning;
 
 namespace Notes.WebApi.Controllers
 {
+    [ApiVersion("1.0")]
+    [ApiVersion("2.0")]
+    //[ApiVersionNeutral]
     [Produces("application/json")]
-    [Route("api/[controller]")]
+    [Route("api/{version:apiVersion}/[controller]")]
     [Authorize]
     public class NoteController : BaseController
     {
