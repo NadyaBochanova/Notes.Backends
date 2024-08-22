@@ -1,3 +1,7 @@
+using Microsoft.AspNetCore.Hosting;
+using Microsoft.Extensions.DependencyInjection;
+using Microsoft.Extensions.Hosting;
+using System;
 using Notes.Persistence;
 using Notes.WebApi;
 

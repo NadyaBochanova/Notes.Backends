@@ -2,6 +2,9 @@
 using System.Net;
 using System.Text.Json;
 using FluentValidation;
+using System;
+using System.Threading.Tasks;
+using Microsoft.AspNetCore.Http;
 
 namespace Notes.WebApi.Middleware
 {

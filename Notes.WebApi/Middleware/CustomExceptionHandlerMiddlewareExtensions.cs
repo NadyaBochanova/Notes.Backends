@@ -1,4 +1,6 @@
-﻿namespace Notes.WebApi.Middleware
+﻿using Microsoft.AspNetCore.Builder;
+
+namespace Notes.WebApi.Middleware
 {
     public static class CustomExceptionHandlerMiddlewareExtensions
     {
